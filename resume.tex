@@ -1,0 +1,122 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=3em]{geometry}
+\usepackage{mdwlist}
+\usepackage{color}
+
+% Configuration.
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]
+{\begin{list}{}
+  {\setlength{\leftmargin}{#1}} \item[]
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]
+{\begin{list}{}
+  {\setlength{\leftmargin}{-0.5#1}} \item[]
+}
+{\end{list}}
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+  #1 &
+  #2 \\
+\end{tabular*}}
+
+
+\begin{document}
+
+% Resume header.
+\begin{center}
+  \huge \textbf{Victor Hachard} \\
+  \large
+  victor.hachard@hotmail.fr
+  $\circ$
+  0472433908
+  $\circ$
+  {\bf Available Now}
+  \\
+  github.com/VictorHachard
+  \vspace{-0.2em}
+\end{center}
+
+
+% Skills section.
+\hrule
+\begin{indentsection}{\parindent}
+\begin{description*}
+  \item[Languages:] C, HTML/CSS, JavaScript, PHP, Python, Java, and Shell.
+  \item[Systems:] Windows, UNIX, Linux, Git, GitHub.
+\end{description*}
+\end{indentsection}
+
+
+% Experience section
+\hrule
+\vspace{-0.4em}
+\subsection*{Professional Experience}
+\begin{itemize}
+  \parskip=0.1em
+
+  \item
+  \headerrow
+    {\textbf{Carrefour EU}}
+    {\textbf{Froyenne, Belgique}}
+  \headerrow
+    {\emph{Student Job}}
+    {\emph{June. 2019 -- September 2019}}
+
+  \end{itemize}
+
+
+% Education section.
+\hrule
+\vspace{-0.4em}
+\subsection*{Education}
+\begin{itemize}
+  \parskip=0.1em
+
+  \item
+  \headerrow
+    {\textbf{Haute Ecole en Hainaut}}
+    {\textbf{Mons, Belgique}}
+  \headerrow
+    {\emph{2018 -- 2021}}
+    {\emph{Science Bachelor in Computer Science}}
+  \begin{itemize*}
+    \item
+    Relevant Courses Taken: Programming Languages, Systems and Networks,
+    Object Oriented Design, Computer Organization, Algorithms and Data Structures,
+    Software Development.
+  \end{itemize*}
+\end{itemize}
+
+
+% XXX: I don't know how to make proper footers in LaTeX.
+% \hfill \break
+% \hfill \break
+% \hfill \break
+
+
+% Interests section.
+\hrule
+\begin{indentsection}{\parindent}
+\begin{description*}
+\item[Interests:]
+  Microelectronics, Computer/Software Architecture.
+\end{description*}
+\end{indentsection}
+
+
+% Metalink
+\begin{center}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\footnotesize source code @ github.com/VictorHachard - fork @ github.com/nixpulvis
+\end{center}
+
+\end{document}
