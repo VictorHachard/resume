@@ -3,6 +3,10 @@
 \usepackage{mdwlist}
 \usepackage{color}
 \usepackage{hyperref}
+\usepackage{graphicx}
+
+\newcommand{\Csharp}{%
+  {\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\#}}}}
 
 % Configuration.
 \pagestyle{empty}
@@ -50,7 +54,7 @@
 \begin{indentsection}{\parindent}
 \begin{description*}
   \item[Main Languages:] Java, Python, PHP, SQL.
-  \item[Languages:] C, C#, HTML/CSS, JavaScript/jQuery, Shell.
+  \item[Languages:] C, \Csharp, HTML, CSS, JavaScript/jQuery, Shell, TeX.
   \item[Systems:] Windows, Windows Server, UNIX, Linux, Git, GitHub.
 \end{description*}
 \end{indentsection}
@@ -150,7 +154,7 @@
 \begin{description*}
 \item[Interests:]
   Microelectronics, Computer/Software Architecture, Computer Hardware, Teaching,
-  Construction/DIY.
+  DIY.
 \item[About me:]
   I’m committed to lifelong learning, punctual and reliable,
   good in oral communication.
