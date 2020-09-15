@@ -12,11 +12,17 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v1
 
-      - name: Compile LaTeX documents
+      - name: Compile LaTeX document
         uses: dante-ev/latex-action@master
         with:
           root_file: resume.tex
+
+      - name: Compile LaTeX document 2
+        uses: dante-ev/latex-action@master
+        with:
           root_file: resume_fr.tex
+
+
       - name: Create folder and move files
         run: mkdir /home/runner/work/resume/resume/artifacts
         run: cp /home/runner/work/resume/resume/resume.pdf /home/runner/work/resume/resume/artifacts/resume.pdf
