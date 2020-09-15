@@ -8,7 +8,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Set up Git repository
         uses: actions/checkout@v1
 
@@ -22,10 +21,13 @@ jobs:
         with:
           root_file: resume_fr.tex
 
-
       - name: Create folder and move files
         run: mkdir /home/runner/work/resume/resume/artifacts
+
+      - name: Move file
         run: cp /home/runner/work/resume/resume/resume.pdf /home/runner/work/resume/resume/artifacts/resume.pdf
+
+      - name: Move file 2
         run: cp /home/runner/work/resume/resume/resume_fr.pdf /home/runner/work/resume/resume/artifacts/resume_fr.pdf
 
       - name: Upload PDF files to the workflow tab
