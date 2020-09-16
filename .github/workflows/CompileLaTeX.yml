@@ -11,24 +11,18 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v1
 
-      - name: Compile LaTeX document
+      - name: Compile LaTeX documents
         uses: dante-ev/latex-action@master
         with:
-          root_file: resume.tex
-
-      - name: Compile LaTeX document 2
-        uses: dante-ev/latex-action@master
-        with:
-          root_file: resume_fr.tex
+          root_file: |
+            resume.tex
+            resume_fr.tex
 
       - name: Create folder and move files
-        run: mkdir /home/runner/work/resume/resume/artifacts
-
-      - name: Move file
-        run: cp /home/runner/work/resume/resume/resume.pdf /home/runner/work/resume/resume/artifacts/resume.pdf
-
-      - name: Move file 2
-        run: cp /home/runner/work/resume/resume/resume_fr.pdf /home/runner/work/resume/resume/artifacts/resume_fr.pdf
+        run: |
+            mkdir /home/runner/work/resume/resume/artifacts
+            cp /home/runner/work/resume/resume/resume.pdf /home/runner/work/resume/resume/artifacts/resume.pdf
+            cp /home/runner/work/resume/resume/resume_fr.pdf /home/runner/work/resume/resume/artifacts/resume_fr.pdf
 
       - name: Upload PDF files to the workflow tab
         uses: actions/upload-artifact@v2
