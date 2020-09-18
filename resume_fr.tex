@@ -5,6 +5,9 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{xspace}
+\usepackage{datetime}
+
+\newdateformat{frenchDate}{\THEDAY~\monthname,~\THEYEAR}
 
 \newcommand{\Csharp}{%
   {\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\#}}}}
@@ -39,6 +42,7 @@
 
 \begin{document}
 
+
 % Resume header.
 \begin{center}
   \LARGE\textbf{Victor Hachard} \normalsize\emph{6 Juin, 1999} \\
@@ -52,23 +56,6 @@
   \\ 7500 Tournai, Belgique
   \vspace{-0.2em}
 \end{center}
-
-
-% Experience section.
-\hrule
-\vspace{-0.4em}
-\subsection*{Expériences Professionnelles}
-\begin{itemize}
-  \parskip=0.1em
-
-  \item
-  \headerrow
-    {\textbf{Carrefour EU}}
-    {\textbf{Froyennes, Belgique}}
-  \headerrow
-    {\emph{Job étudiant}}
-    {\emph{Juin 2019 -- September 2020}}
-  \end{itemize}
 
 
 % Education section.
@@ -110,6 +97,23 @@
     {victorhachard.fr}
   \end{itemize*}
 \end{itemize}
+
+
+% Experience section.
+\hrule
+\vspace{-0.4em}
+\subsection*{Expériences Professionnelles}
+\begin{itemize}
+  \parskip=0.1em
+
+  \item
+  \headerrow
+    {\textbf{Carrefour EU}}
+    {\textbf{Froyennes, Belgique}}
+  \headerrow
+    {\emph{Job étudiant}}
+    {\emph{Juin 2019 -- September 2020}}
+  \end{itemize}
 
 
 % Projects section.
@@ -164,8 +168,7 @@
 \begin{indentsection}{\parindent}
 \begin{description*}
   \item[Langues :]
-  Français \emph{(langue maternelle)}, Anglais \emph{(capacité professionnelle
-  complète)}.
+  Français \emph{(langue maternelle)}, Anglais \emph{(capacité professionnelle)}.
  \item[Langages :] Java, PHP, Python, SQL, C, \Csharp, HTML,
   CSS,  JavaScript/jQuery, Shell, Bash, TeX.
   \item[Systèmes :] Windows, Windows Server, Linux.
@@ -181,10 +184,10 @@
 \begin{description*}
 \item[Centres d'intérêt :]
   art, cuisine épicée, DIY, enseignement, hardware, jeux vidéo (factory building),
-  microélectronique, musique (classique, rock classique, 80), natation, travails
-  manuels et voyages. 
+  microélectronique, musique (classique, rock classique, 80), natation, 
+  photographie, travail manuel et voyage.
 \item[À propos de moi :]
-  j'ai envie d'apprendre tout ma vie, je suis ponctuel, fiable,
+  j'ai envie d'apprendre tout ma vie, je suis créatif, ponctuel, fiable,
   bon en communication orale, autodidacte.
 \end{description*}
 \end{indentsection}
@@ -192,12 +195,11 @@
 
 % Metalink.
 \begin{center}
-\definecolor{gray}{rgb}{0.5,0.5,0.5}
 \footnotesize \latex source code at
 \href{http://www.github.com/VictorHachard/resume}
 {github.com/VictorHachard/resume} - fork from
 \href{http://www.github.com/nixpulvis}
-{github.com/nixpulvis}
+{github.com/nixpulvis} \\
+% dernière mise à jour \frenchDate\today
 \end{center}
-
 \end{document}
