@@ -1,47 +1,6 @@
-\documentclass[10pt,a4paper]{article}
-\usepackage[margin=3em]{geometry}
-\usepackage{mdwlist}
-\usepackage{color}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{xspace}
-\usepackage{datetime}
-
-\newdateformat{frenchDate}{\THEDAY~\monthname,~\THEYEAR}
-
-\newcommand{\Csharp}{%
-  {\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\#}}}}
-
-\newcommand{\latex}{\LaTeX\xspace}
-
-% Configuration.
-\pagestyle{empty}
-\setlength{\tabcolsep}{0em}
-
-% indentsection style, used for sections that aren't already in lists
-% that need indentation to the level of all text in the document
-\newenvironment{indentsection}[1]
-{\begin{list}{}
-  {\setlength{\leftmargin}{#1}} \item[]
-}
-{\end{list}}
-
-% opposite of above; bump a section back toward the left margin
-\newenvironment{unindentsection}[1]
-{\begin{list}{}
-  {\setlength{\leftmargin}{-0.5#1}} \item[]
-}
-{\end{list}}
-% format two pieces of text, one left aligned and one right aligned
-\newcommand{\headerrow}[2]
-{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
-  #1 &
-  #2 \\
-\end{tabular*}}
-
+\input{./imports/imports.tex}
 
 \begin{document}
-
 
 % Resume header.
 \input{./head/fr/header.tex}
@@ -73,14 +32,12 @@
 \end{description*}
 \end{indentsection}
 
-
 % Metalink.
 \begin{center}
 \footnotesize \latex source code @
 \href{http://www.github.com/VictorHachard/resume}
 {github.com/VictorHachard/resume} - fork @
 \href{http://www.github.com/nixpulvis}
-{github.com/nixpulvis} \\
-% dernière mise à jour \frenchDate\today
+{github.com/nixpulvis}
 \end{center}
 \end{document}
