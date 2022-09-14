@@ -15,13 +15,13 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: |
-            resume.tex
+            resume_en.tex
             resume_fr.tex
 
       - name: Create folder and move files
         run: |
             mkdir /home/runner/work/resume/resume/artifacts
-            cp /home/runner/work/resume/resume/resume.pdf /home/runner/work/resume/resume/artifacts/resume.pdf
+            cp /home/runner/work/resume/resume/resume_en.pdf /home/runner/work/resume/resume/artifacts/resume_en.pdf
             cp /home/runner/work/resume/resume/resume_fr.pdf /home/runner/work/resume/resume/artifacts/resume_fr.pdf
 
       - name: Upload PDF files to the workflow tab
